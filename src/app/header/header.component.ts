@@ -20,7 +20,7 @@ callCenter:string;
 
   ngOnInit(): void {
     //this.name='Mahmut';
-    this.callCenter='444 1 123';
+    this.callCenter=this.testService.callCenter;
   }
 
 }

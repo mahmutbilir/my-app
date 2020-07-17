@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TestService} from '../test.service'
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 callCenter:string;
-  constructor() { }
+  constructor(private testService: TestService) { }
 
   ngOnInit(): void {
-    this.callCenter='444 1 123';
+    this.callCenter=this.testService.callCenter;
   }
 
 
